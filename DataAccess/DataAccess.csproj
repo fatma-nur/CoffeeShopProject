@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210603202936_InitialDatabase.cs" />
+    <Compile Remove="Migrations\20210603202936_InitialDatabase.Designer.cs" />
+    <Compile Remove="Migrations\20210603203948_RelationMigration.cs" />
+    <Compile Remove="Migrations\20210603203948_RelationMigration.Designer.cs" />
+    <Compile Remove="Migrations\20210606001033_FixedModels.cs" />
+    <Compile Remove="Migrations\20210606001033_FixedModels.Designer.cs" />
+    <Compile Remove="Migrations\20210606165202_mig_rewrite.cs" />
+    <Compile Remove="Migrations\20210606165202_mig_rewrite.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+  </ItemGroup>
+
+</Project>
